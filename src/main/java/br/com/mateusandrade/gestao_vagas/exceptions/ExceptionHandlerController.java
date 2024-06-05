@@ -1,4 +1,4 @@
-package br.com.mateusandrade.gestao_vagas.execptions;
+package br.com.mateusandrade.gestao_vagas.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;
