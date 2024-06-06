@@ -8,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -16,9 +17,9 @@ import lombok.Data;
 @Entity(name = "job")
 @Data
 public class JobEntity {
-  
+
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
   private String description;
   private String benefits;
@@ -33,5 +34,4 @@ public class JobEntity {
 
   @CreationTimestamp
   private LocalDateTime createdAt;
-
 }
